@@ -27,8 +27,8 @@ export default function GenerateQR() {
     if (error) {
       alert('เกิดข้อผิดพลาด: ' + error.message)
     } else {
-      const baseUrl = window.location.origin
-      const generatedLink = `${baseUrl}/order/${tableNumber}`
+const baseUrl = 'https://drip-and-dwell-order.vercel.app'
+const generatedLink = `${baseUrl}/order/${tableNumber}`
       const googleQr = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(generatedLink)}`
       setQrUrl(googleQr)
     }
